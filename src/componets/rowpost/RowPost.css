@@ -18,3 +18,8 @@
     max-height:250px;
     padding-left:10px;
 }
+
+.small-poster{
+    max-height:150px;
+    margin-right: 10px;
+}

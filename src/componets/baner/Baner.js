@@ -5,9 +5,10 @@ import axios from '../axios'
 function Baner() {
   const [movie, setMovie] = useState();
   useEffect(() => {
-    axios.get(`trending/all/week?api_key=${APIKEY}&language=en-US`).then((responce)=>{
-      console.log(responce.data.results[0])
-      setMovie(responce.data.results[0])
+    axios.get(`trending/all/week?api_key=${APIKEY}&language=en-US`).then((responce)=>{     
+      let x = Math.floor((Math.random() * 20) + 1);
+      console.log(responce.data.results[x])
+      setMovie(responce.data.results[x])
     })
     
   }, []);
